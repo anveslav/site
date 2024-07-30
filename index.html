@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday!</title>
     <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+
         body {
             display: flex;
             justify-content: center;
@@ -13,20 +30,44 @@
             margin: 0;
             font-family: Arial, sans-serif;
             background-color: #f0e68c;
-            background-image: url('background.jpg');
             background-size: cover;
             background-position: center;
         }
+
         .card {
             text-align: center;
             background: rgba(255, 255, 255, 0.8);
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 2s ease-in-out;
         }
+
         h1 {
             color: #ff6347;
+            animation: bounce 2s infinite;
         }
+
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .memes {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .memes img {
+            width: 150px;
+            height: 150px;
+            margin: 0 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 3s ease-in-out;
+        }
+
         button {
             padding: 10px 20px;
             font-size: 16px;
@@ -35,7 +76,9 @@
             background-color: #ff6347;
             color: white;
             cursor: pointer;
+            margin-top: 20px;
         }
+
         button:hover {
             background-color: #e5533d;
         }
@@ -45,6 +88,10 @@
     <div class="card">
         <h1>Happy Birthday, [Friend's Name]!</h1>
         <p>Wishing you a day filled with love, joy, and all your favorite things!</p>
+        <div class="memes">
+            <img src="https://i.imgur.com/4AiXzf8.jpg" alt="Funny Cat">
+            <img src="https://i.imgur.com/1gvNm6i.jpg" alt="Funny Dog">
+        </div>
         <button onclick="playGreeting()">Click for a surprise!</button>
     </div>
 
