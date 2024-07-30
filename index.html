@@ -4,22 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500&display=swap" rel="stylesheet">
     <style>
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-30px);
-            }
-            60% {
-                transform: translateY(-15px);
-            }
+        /* Reset CSS */
+        body, h1, p {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         body {
@@ -27,62 +18,73 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f0e68c;
-            background-size: cover;
-            background-position: center;
+            font-family: 'Raleway', sans-serif;
+            background: linear-gradient(to right, #f8cdda, #1d2b64);
+            color: #333;
+            overflow: hidden;
         }
 
         .card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 40px;
             text-align: center;
-            background: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            animation: fadeIn 2s ease-in-out;
+            max-width: 600px;
+            position: relative;
+            overflow: hidden;
         }
 
         h1 {
+            font-size: 36px;
             color: #ff6347;
-            animation: bounce 2s infinite;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 2px rgba(255, 99, 71, 0.5);
         }
 
         p {
-            font-size: 18px;
+            font-size: 20px;
             color: #555;
+            margin-bottom: 20px;
         }
 
         .memes {
             display: flex;
             justify-content: center;
-            margin-top: 20px;
+            margin: 20px 0;
+            gap: 10px;
         }
 
         .memes img {
             width: 150px;
             height: 150px;
-            margin: 0 10px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            animation: fadeIn 3s ease-in-out;
+            transition: transform 0.2s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .memes img:hover {
+            transform: scale(1.1);
         }
 
         button {
-            padding: 10px 20px;
-            font-size: 16px;
+            padding: 12px 24px;
+            font-size: 18px;
             border: none;
-            border-radius: 5px;
+            border-radius: 30px;
             background-color: #ff6347;
             color: white;
             cursor: pointer;
-            margin-top: 20px;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
         button:hover {
             background-color: #e5533d;
+            transform: translateY(-2px);
         }
 
+        /* Modal styles */
         .modal {
             display: none;
             position: fixed;
@@ -91,20 +93,21 @@
             top: 0;
             width: 100%;
             height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
             overflow: auto;
-            background-color: rgba(0, 0, 0, 0.4);
+            transition: opacity 0.3s ease;
         }
 
         .modal-content {
-            background-color: #fefefe;
+            background-color: #fff;
             margin: 15% auto;
             padding: 20px;
             border: 1px solid #888;
-            width: 80%;
+            width: 90%;
             max-width: 500px;
-            text-align: center;
             border-radius: 10px;
-            animation: fadeIn 1s;
+            text-align: center;
+            animation: slideIn 0.5s forwards;
         }
 
         .close {
@@ -119,6 +122,11 @@
             color: black;
             text-decoration: none;
             cursor: pointer;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
     </style>
 </head>
