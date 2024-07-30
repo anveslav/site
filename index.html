@@ -1,134 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday!</title>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500&display=swap" rel="stylesheet">
-    <style>
-        /* Reset CSS */
-        body, h1, p {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            font-family: 'Raleway', sans-serif;
-            background: linear-gradient(to right, #f8cdda, #1d2b64);
-            color: #333;
-            overflow: hidden;
-        }
-
-        .card {
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            padding: 40px;
-            text-align: center;
-            max-width: 600px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        h1 {
-            font-size: 36px;
-            color: #ff6347;
-            margin-bottom: 10px;
-            text-shadow: 1px 1px 2px rgba(255, 99, 71, 0.5);
-        }
-
-        p {
-            font-size: 20px;
-            color: #555;
-            margin-bottom: 20px;
-        }
-
-        .memes {
-            display: flex;
-            justify-content: center;
-            margin: 20px 0;
-            gap: 10px;
-        }
-
-        .memes img {
-            width: 150px;
-            height: 150px;
-            border-radius: 10px;
-            transition: transform 0.2s;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .memes img:hover {
-            transform: scale(1.1);
-        }
-
-        button {
-            padding: 12px 24px;
-            font-size: 18px;
-            border: none;
-            border-radius: 30px;
-            background-color: #ff6347;
-            color: white;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.2s;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        button:hover {
-            background-color: #e5533d;
-            transform: translateY(-2px);
-        }
-
-        /* Modal styles */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            overflow: auto;
-            transition: opacity 0.3s ease;
-        }
-
-        .modal-content {
-            background-color: #fff;
-            margin: 15% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 90%;
-            max-width: 500px;
-            border-radius: 10px;
-            text-align: center;
-            animation: slideIn 0.5s forwards;
-        }
-
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        @keyframes slideIn {
-            from { transform: translateY(-100%); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-    </style>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Happy Birthday!</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+        <style>
+            /* Reset CSS */
+            body, h1, p {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+    
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                font-family: 'Poppins', sans-serif;
+                background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+                color: #333;
+                overflow: hidden;
+            }
+    
+            .card {
+                background: rgba(255, 255, 255, 0.9);
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                padding: 40px;
+                text-align: center;
+                max-width: 600px;
+                position: relative;
+                overflow: hidden;
+                animation: fadeIn 2s ease-in-out;
+            }
+    
+            h1 {
+                font-size: 36px;
+                color: #ff6b6b;
+                margin-bottom: 10px;
+                text-shadow: 1px 1px 2px rgba(255, 107, 107, 0.5);
+            }
+    
+            p {
+                font-size: 20px;
+                color: #555;
+                margin-bottom: 20px;
+            }
+    
+            .memes {
+                display: flex;
+                justify-content: center;
+                margin: 20px 0;
+                gap: 10px;
+            }
+    
+            .memes img {
+                width: 150px;
+                height: 150px;
+                border-radius: 10px;
+                transition: transform 0.2s;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+    
+            .memes img:hover {
+                transform: scale(1.1);
+            }
+    
+            button {
+                padding: 12px 24px;
+                font-size: 18px;
+                border: none;
+                border-radius: 30px;
+                background-color: #ff6b6b;
+                color: white;
+                cursor: pointer;
+                transition: background-color 0.3s, transform 0.2s;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            }
+    
+            button:hover {
+                background-color: #ff5252;
+                transform: translateY(-2px);
+            }
+    
+            /* Modal styles */
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                overflow: auto;
+                transition: opacity 0.3s ease;
+            }
+    
+            .modal-content {
+                background-color: #fff;
+                margin: 15% auto;
+                padding: 20px;
+                border: 1px solid #888;
+                width: 90%;
+                max-width: 500px;
+                border-radius: 10px;
+                text-align: center;
+                animation: slideIn 0.5s forwards;
+            }
+    
+            .close {
+                color: #aaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+    
+            .close:hover,
+            .close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+    
+            @keyframes slideIn {
+                from { transform: translateY(-100%); opacity: 0; }
+                to { transform: translateY(0); opacity: 1; }
+            }
+    
+            @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+            }
+        </style>
 </head>
 <body>
     <div class="card">
